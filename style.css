@@ -75,6 +75,8 @@ section {
     align-items: center;
     justify-content: center;
     gap: 15rem;
+    
+
 }
 .home-content{
     display: flex;
@@ -102,22 +104,43 @@ span{
     margin-top: 1.5rem;
     line-height: 1;
 }
-.home-img{
-    border-radius: 50%;
+
+
+.home-img {
+    width: 400px; /* Set the width and height to your desired size */
+    height: 300px;
+    background-image: url("image.jpg"); /* Set your image as the background */
+    background-size: cover; /* Ensure the image covers the container */
+    border-radius: 50%; /* Keep the border-radius circular */
+    box-shadow: 0 0 25px var(--main-color); /* Apply the shadow effect */
+    cursor: pointer; /* Change cursor on hover */
+    transition: 0.4s ease-in-out; /* Add a smooth transition */
 }
-.home-img img{
-    position: relative;
-    top: 3rem;
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+
+
+.home-img img {
+    width: 100%; /* Let the width adjust automatically */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: 100%; /* Let the height adjust automatically */
+    max-height: 100%; /* Ensure the image doesn't exceed its container */
+    object-fit: cover; /* Cover the entire container without stretching the image */
+    border-radius: 50%; /* Keep the border-radius circular */
+    box-shadow: 0 0 25px var(--main-color); /* Apply the shadow effect */
+    cursor: pointer; /* Change cursor on hover */
+    transition: 0.4s ease-in-out; /* Add a smooth transition */
 }
+
+
+
 .home-img img:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
                 0 0 100px var(--main-color),
+}
+.home-img:hover {
+    background-color: rgba(0, 0, 255, 0.5); /* Change the background color to blue with transparency */
+    transform: scale(1.1); /* Scale the image on hover */
+    box-shadow: 0 0 50px var(--main-color); /* Add a stronger shadow effect */
 }
 .home-content p{
     font-size: 1.5rem;
@@ -264,14 +287,14 @@ span{
 
 }
 .education{
-    padding: 100px 15px;
+    padding: 30px 15px;
     background: var(--second-bg-color);
 }
 .education h2{
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 .timeline-items{
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -286,7 +309,7 @@ span{
     left: calc(50% - 1px);
 }
 .timeline-item{
-margin-bottom: 40px;
+margin-bottom: 10px;
 width: 100%;
 position: relative;
 }
@@ -354,20 +377,20 @@ top: 10px;
     color: black;
 }
 .services h2{
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     color: white;
 }
 .services-container{
 display: grid;
 grid-template-columns: repeat(2,1fr);
 align-items: center;
-gap: 2.5rem;
+gap: 2rem;
 }
 .service-box{
     background-color: var(--main-color);
-    height: 300px;
+    height: 200px;
     border-radius: 3rem;
-    border: 5px solid transparent;
+    border: 1px solid transparent;
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
@@ -389,7 +412,7 @@ gap: 2.5rem;
 }
 .service-info h4{
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 2;
 }
 .service-info p{
@@ -414,7 +437,7 @@ gap: 2.5rem;
     margin-bottom: 5rem;
 }
 .testimonials-box img{
-    width: 15rem;
+    width: 20rem;
     border-radius: 50%;
     border: 3px solid var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
@@ -654,5 +677,52 @@ transition: 0.3s ease-in-out;
 .services-container{
     grid-template-columns: repeat(1.1fr);
 }
+}
 
+/*Skills section */
+.skills{
+    background:var(--second-bg-color) ;
+}
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+
+}
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: var(--main-color);
+    text-align: center;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-var .bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--bg-color);
+    border-radius: 25px;
+    box-shadow: var(--bg-color);
+
+}
+.skill-bar .bar .html{
+    width: 72%;
 }
